@@ -70,12 +70,16 @@ class Driver {
         
         // Now we initialize the rows
         MenuRow[] rows = new MenuRow[]{
-                new MenuRow("Leave the Program!🚪", () -> main(null)),
-                new MenuRow("Swapper Lab!🔀", () -> IntByReference.main(null)),  
-                new MenuRow("Want Matrices?🤓", () -> Matrix.main(null)),
-                new MenuRow("Waiting in the Queue.🙄", () -> QueueTester.main(null)),
-                new MenuRow("Calculating. Now.🤖", () -> Calculator.main(null)),
-                new MenuRow("Sorting!!!➡️", () -> Sorts.main(null))
+                new MenuRow("Cancel", () -> main(null)),
+                new MenuRow("Swapper", () -> IntByReference.main(null)),  
+                new MenuRow("Matricies", () -> Matrix.main(null)),
+                new MenuRow("Queue", () -> QueueTester.main(null)),
+                new MenuRow("Calculator", () -> Calculator.main(null)),
+    
+           new MenuRow("Selection Sort", () -> SelectionSort.main(null)),
+          new MenuRow("Merge Sort", () -> MergeSort.main(null)),
+          new MenuRow("Insertion Sort", () -> InsertionSort.main(null)), 
+          new MenuRow("Bubble Sort", () -> BubbleSort.main(null)), 
         };
 
         // Starting to build the menu
@@ -83,7 +87,7 @@ class Driver {
 
         // Run menu forever, exit condition contained in loop
         while (true) {
-            System.out.println("      Ak's Data Structures Labs     ");
+            System.out.println(" ");
             
             // This command allows us to actually display those rows                    that we created up above
             menu.print();
